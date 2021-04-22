@@ -5,7 +5,7 @@ const ui = require('./ui')
 const formFields = require('../../lib/get-form-fields')
 const store = require('./store')
 
-const onSignUp = function(event) {
+const onSignUp = function (event) {
   event.preventDefault()
   const form = event.target
   const formData = formFields(form)
@@ -13,7 +13,7 @@ const onSignUp = function(event) {
     .then(ui.onSignUpSuccess)
     .catch(ui.onError)
 }
-const onSignIn = function(event) {
+const onSignIn = function (event) {
   event.preventDefault()
   const form = event.target
   const formData = formFields(form)
@@ -21,7 +21,7 @@ const onSignIn = function(event) {
     .then(ui.onSignInSuccess)
     .catch(ui.onError)
 }
-const onChangePassword = function(event) {
+const onChangePassword = function (event) {
   event.preventDefault()
   const form = event.target
   const formData = formFields(form)
@@ -35,12 +35,18 @@ const onSignOut = function () {
     .then(ui.onSignOutSuccess)
     .catch(ui.onError)
 }
-const onCreatePainting = function(event) {
+const onCreatePainting = function (event) {
   event.preventDefault()
   const form = event.target
   const formData = formFields(form)
   api.createPainting(formData)
     .then(ui.onCreateSuccess)
+    .catch(ui.onError)
+}
+const onIndexPainting = function () {
+  event.preventDefault()
+  api.indexPainting()
+    .then(ui.onIndexSuccess)
     .catch(ui.onError)
 }
 
@@ -51,5 +57,6 @@ module.exports = {
   onSignIn,
   onChangePassword,
   onSignOut,
-  onCreatePainting
+  onCreatePainting,
+  onIndexPainting
 }

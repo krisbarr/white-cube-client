@@ -49,6 +49,21 @@ $('#message').text("You've created a painting!")
 $('#painting-created').html(paintingHtml)
 $('#paintings-create').trigger('reset')
 }
+const onIndexSuccess = function(response) {
+  const paintings = response.paintings
+  console.log(paintings.title)
+  let paintingsHtml = ''
+  paintings.forEach(painting => {
+    paintingsHtml += `
+      <h6>Title: ${painting.title}</h6>
+      <p>Artist: ${painting.artist}</p>
+      <p>Location: ${painting.location}</p>
+      <p>Movement: ${painting.movement}</p>
+      <p>ID: ${painting._id}</p>
+    `
+    $('#paintings-display').html(paintingsHtml)
+  })
+}
 
 module.exports = {
   onSignUpSuccess,
@@ -56,5 +71,6 @@ module.exports = {
   onSignInSuccess,
   onChangePasswordSuccess,
   onSignOutSuccess,
-  onCreateSuccess
+  onCreateSuccess,
+  onIndexSuccess
 }

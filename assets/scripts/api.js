@@ -46,6 +46,15 @@ const createPainting = function(formData) {
     }
   })
 }
+const indexPainting = function () {
+  return $.ajax({
+    method: 'GET',
+    url: config.apiUrl + '/paintings',
+    headers : {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
 
 
 module.exports = {
@@ -53,5 +62,6 @@ module.exports = {
   signIn,
   changePassword,
   signOut,
-  createPainting
+  createPainting,
+  indexPainting
 }

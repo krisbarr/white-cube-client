@@ -15,5 +15,5 @@ $(() => {
   $('#change-password').on('submit', events.onChangePassword)
   $('#sign-out').on('click', events.onSignOut)
   $('#paintings-create').on('submit', events.onCreatePainting)
-  $('#paintings-index').on('submit', events.onCreatePainting)
+  $('#paintings-index').on('click', events.onIndexPainting)
 })
