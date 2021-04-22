@@ -7,6 +7,8 @@
 // require('./example')
 const events = require('./events.js')
 $(() => {
+  $('#change-password').hide()
+  $('#sign-out').hide()
   $('#sign-up').on('submit', events.onSignUp)
   $('#sign-in').on('submit', events.onSignIn)
   $('#change-password').on('submit', events.onChangePassword)
