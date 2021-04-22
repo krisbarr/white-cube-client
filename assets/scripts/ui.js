@@ -21,11 +21,14 @@ const onChangePasswordSuccess = function () {
   $('#message').text("Your password has been changed")
   $('#change-password').trigger('reset')
 }
-
+const onSignOutSuccess = function () {
+  $('#message').text("You're signed out!")
+}
 
 module.exports = {
   onSignUpSuccess,
   onError,
   onSignInSuccess,
-  onChangePasswordSuccess
+  onChangePasswordSuccess,
+  onSignOutSuccess
 }
