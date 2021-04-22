@@ -20,19 +20,32 @@
         <input name="credentials[password_confirmation]" type="password" placeholder="confirm password" required>
         <button>Sign Up</button>
       </form>
-      <br>
+      <hr>
       <form id="sign-in">
         <input name="credentials[email]" type="text" placeholder="email" required >
         <input name="credentials[password]" type="password" placeholder="password" required>
         <button>Sign In</button>
       </form>
-      <br>
+      <hr>
       <form id="change-password">
         <input name="passwords[old]" type="password" placeholder="old password" required>
         <input name="passwords[new]" type="password" placeholder="new password" required>
           <button>Change Password</button>
         </form>
-        <br>
+        <hr>
         <button id="sign-out">Sign Out</button>
+        <hr>
+        <form id="paintings-create">
+          <input name="painting[title]" type="text" placeholder="Title" required>
+          <input name="painting[artist]" type="text" placeholder="Artist's Name" required>
+          <input name="painting[location]" type="text" placeholder="Location" required>
+          <input name="painting[movement]" type="text" placeholder="Artistic Movement" required>
+            <button>Create Painting</button>
+          </form>
+          <hr>
+          <div id="painting-created"></div>
+          <hr>
+          <button>Get All Paintings</button>
+
     </body>
 </html>

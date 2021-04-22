@@ -35,6 +35,14 @@ const onSignOut = function () {
     .then(ui.onSignOutSuccess)
     .catch(ui.onError)
 }
+const onCreatePainting = function(event) {
+  event.preventDefault()
+  const form = event.target
+  const formData = formFields(form)
+  api.createPainting(formData)
+    .then(ui.onCreateSuccess)
+    .catch(ui.onError)
+}
 
 
 
@@ -42,5 +50,6 @@ module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
-  onSignOut
+  onSignOut,
+  onCreatePainting
 }

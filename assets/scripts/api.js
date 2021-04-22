@@ -36,11 +36,22 @@ const signOut = function () {
     }
   })
 }
+const createPainting = function(formData) {
+  return $.ajax({
+    method: 'POST',
+    url: config.apiUrl + '/paintings',
+    data: formData,
+    headers : {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
 
 
 module.exports = {
   signUp,
   signIn,
   changePassword,
-  signOut
+  signOut,
+  createPainting
 }
