@@ -10,7 +10,27 @@ const signUp = function(formData) {
     data: formData
   })
 }
+const signIn = function(formData) {
+  return $.ajax({
+    method: 'POST',
+    url: config.apiUrl + '/sign-in',
+    data: formData
+  })
+}
+const changePassword = function(formData) {
+  return $.ajax({
+    method: 'PATCH',
+    url: config.apiUrl + '/change-password',
+    data: formData,
+    headers : {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
+
 
 module.exports = {
-  signUp
+  signUp,
+  signIn,
+  changePassword
 }
