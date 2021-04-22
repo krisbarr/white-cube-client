@@ -12,7 +12,8 @@ const onError = function() {
   $('#message').text("That didn't work. Please try again")
   $('#sign-up').trigger('reset')
 }
-const onSignInSuccess = function() {
+const onSignInSuccess = function(response) {
+  store.user = response.user
   $('#message').text("You're signed in!")
   $('#sign-up').trigger('reset')
 }
