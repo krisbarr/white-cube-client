@@ -39,6 +39,10 @@ const onSignOutSuccess = function () {
   $('#change-password').hide()
   $('#sign-in').show()
   $('#sign-up').show()
+  $('#paintings-create').hide()
+  $('#paintings-destroy').hide()
+  $('#paintings-update').hide()
+  $('#paintings-index').hide()
 }
 const onCreateSuccess = function(response) {
 store.painting = response.painting
