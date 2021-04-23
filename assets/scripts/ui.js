@@ -25,6 +25,9 @@ const onSignInSuccess = function(response) {
   $('#change-password').show()
   $('#sign-out').show()
   $('#paintings-create').show()
+  $('#paintings-destroy').show()
+  $('#paintings-update').show()
+  $('#paintings-index').show()
 }
 const onChangePasswordSuccess = function () {
   $('#message').text("Your password has been changed")
@@ -79,6 +82,7 @@ const onUpdateSuccess = function(response) {
 }
 const onDestroySuccess = function () {
   $('#message').text("You've successfully deleted the painting! Click Get All Paintings to refresh")
+  $('#paintings-destroy').trigger('reset')
 }
 
 

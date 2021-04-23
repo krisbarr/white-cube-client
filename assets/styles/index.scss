@@ -1,1 +1,22 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Bungee+Outline&family=Roboto+Mono&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Roboto Mono', serif;
+  background: url('public/white-cube-monalisa2.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+h1 {
+  font-family: 'Bungee Outline', cursive;
+  font-size: 96px;
+  text-align: center;
+}
+span {
+  font-family: 'Bungee Hairline', cursive;
+}
+button {
+  background-color: white;
+}
