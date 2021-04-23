@@ -73,9 +73,12 @@ const onUpdateSuccess = function(response) {
     <p>Location: ${response.painting.location}</p>
     <p>Movement: ${response.painting.movement}</p>
   `*/
-  $('#message').text("You've updated the painting!")
+  $('#message').text("You've updated the painting! Click Get All Paintings to refresh")
   //$('#painting-updated').html(paintingHtml)
   $('#paintings-update').trigger('reset')
+}
+const onDestroySuccess = function () {
+  $('#message').text("You've successfully deleted the painting! Click Get All Paintings to refresh")
 }
 
 
@@ -87,5 +90,6 @@ module.exports = {
   onSignOutSuccess,
   onCreateSuccess,
   onIndexSuccess,
-  onUpdateSuccess
+  onUpdateSuccess,
+  onDestroySuccess
 }

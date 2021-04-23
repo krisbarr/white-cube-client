@@ -59,6 +59,14 @@ const onUpdatePainting = function (event) {
     .then(ui.onUpdateSuccess)
     .catch(ui.onError)
 }
+const onDestroyPainting = function (event) {
+  event.preventDefault()
+  const form = event.target
+  const formData = formFields(form)
+  api.destroyPainting(formData.painting.id)
+    .then(ui.onDestroySuccess)
+    .catch(ui.onError)
+}
 
 
 
@@ -69,5 +77,6 @@ module.exports = {
   onSignOut,
   onCreatePainting,
   onIndexPainting,
-  onUpdatePainting
+  onUpdatePainting,
+  onDestroyPainting
 }

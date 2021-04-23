@@ -65,6 +65,15 @@ const updatePainting = function(id, formData) {
     }
   })
 }
+const destroyPainting = function(id) {
+  return $.ajax({
+    method: 'DELETE',
+    url: config.apiUrl + '/paintings/' + id,
+    headers : {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
 
 
 module.exports = {
@@ -74,5 +83,6 @@ module.exports = {
   signOut,
   createPainting,
   indexPainting,
-  updatePainting
+  updatePainting,
+  destroyPainting
 }

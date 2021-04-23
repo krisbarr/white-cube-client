@@ -17,5 +17,6 @@ $(() => {
   $('#paintings-create').on('submit', events.onCreatePainting)
   $('#paintings-index').on('click', events.onIndexPainting)
   $('#paintings-update').on('submit', events.onUpdatePainting)
+  $('#paintings-destroy').on('submit', events.onDestroyPainting)
 
 })
