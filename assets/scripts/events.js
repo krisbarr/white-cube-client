@@ -39,6 +39,7 @@ const onCreatePainting = function (event) {
   event.preventDefault()
   const form = event.target
   const formData = formFields(form)
+  console.log(formData)
   api.createPainting(formData)
     .then(ui.onCreateSuccess)
     .catch(ui.onError)
@@ -53,7 +54,6 @@ const onUpdatePainting = function (event) {
   event.preventDefault()
   const form = event.target
   const formData = formFields(form)
-  console.log(formData.painting.id)
   const id = formData.painting.id
   api.updatePainting(id, formData)
     .then(ui.onUpdateSuccess)

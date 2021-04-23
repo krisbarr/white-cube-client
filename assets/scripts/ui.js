@@ -41,7 +41,6 @@ const onSignOutSuccess = function () {
   $('#sign-up').show()
 }
 const onCreateSuccess = function(response) {
-  console.log(response)
 store.painting = response.painting
 const paintingHtml = `
   <h4>Title: ${response.painting.title}</h4>
@@ -49,7 +48,11 @@ const paintingHtml = `
   <p>Location: ${response.painting.location}</p>
   <p>Movement: ${response.painting.movement}</p>
 `
+const imageHtml = `
+  <img src="${response.painting.image}" alt ="${response.painting.title}" style="width:300px" />
+`
 $('#message').text("You've created a painting!")
+$('#painting-image').html(imageHtml)
 $('#painting-created').html(paintingHtml)
 $('#paintings-create').trigger('reset')
 }
