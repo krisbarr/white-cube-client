@@ -46,8 +46,21 @@
           <div id="painting-created"></div>
           <hr>
           <section id='index'>
-          <button id='paintings-index'>Get All Paintings</button>
-          <div id='paintings-display'>
+            <button id='paintings-index'>Get All Paintings</button>
+            <hr>
+            <div id='paintings-display'></div>
+          </section>
+        <section id="update">
+          <form id='paintings-update'>
+            <input name="painting[id]" type="text" placeholder="Enter id here" required>
+            <input name="painting[title]" type="text" placeholder="Enter painting title" required>
+            <input name="painting[arists]" type="text" placeholder="Enter artist"required>
+            <input name="painting[location]" type="text" placeholder="Enter location" required>
+            <input name="painting[movement]" type="text" placeholder="Enter movement"required>
+            <hr>
+            <button>Update Painting</button>
+          </form>
+
         </section>
 
     </body>

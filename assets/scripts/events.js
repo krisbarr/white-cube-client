@@ -49,6 +49,16 @@ const onIndexPainting = function () {
     .then(ui.onIndexSuccess)
     .catch(ui.onError)
 }
+const onUpdatePainting = function (event) {
+  event.preventDefault()
+  const form = event.target
+  const formData = formFields(form)
+  console.log(formData.painting.id)
+  const id = formData.painting.id
+  api.updatePainting(id, formData)
+    .then(ui.onUpdateSuccess)
+    .catch(ui.onError)
+}
 
 
 
@@ -58,5 +68,6 @@ module.exports = {
   onChangePassword,
   onSignOut,
   onCreatePainting,
-  onIndexPainting
+  onIndexPainting,
+  onUpdatePainting
 }

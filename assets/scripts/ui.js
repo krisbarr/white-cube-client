@@ -38,6 +38,7 @@ const onSignOutSuccess = function () {
   $('#sign-up').show()
 }
 const onCreateSuccess = function(response) {
+  console.log(response)
 store.painting = response.painting
 const paintingHtml = `
   <h4>Title: ${response.painting.title}</h4>
@@ -51,7 +52,6 @@ $('#paintings-create').trigger('reset')
 }
 const onIndexSuccess = function(response) {
   const paintings = response.paintings
-  console.log(paintings.title)
   let paintingsHtml = ''
   paintings.forEach(painting => {
     paintingsHtml += `
@@ -62,8 +62,22 @@ const onIndexSuccess = function(response) {
       <p>ID: ${painting._id}</p>
     `
     $('#paintings-display').html(paintingsHtml)
+    $('#message').text("Here's all the paintings!")
   })
 }
+const onUpdateSuccess = function(response) {
+  console.log(response)
+/*  const paintingHtml = `
+    <h4>Title: ${response.painting.title}</h4>
+    <p>Artist: ${response.painting.artist}</p>
+    <p>Location: ${response.painting.location}</p>
+    <p>Movement: ${response.painting.movement}</p>
+  `*/
+  $('#message').text("You've updated the painting!")
+  //$('#painting-updated').html(paintingHtml)
+  $('#paintings-update').trigger('reset')
+}
+
 
 module.exports = {
   onSignUpSuccess,
@@ -72,5 +86,6 @@ module.exports = {
   onChangePasswordSuccess,
   onSignOutSuccess,
   onCreateSuccess,
-  onIndexSuccess
+  onIndexSuccess,
+  onUpdateSuccess
 }

@@ -55,6 +55,16 @@ const indexPainting = function () {
     }
   })
 }
+const updatePainting = function(id, formData) {
+  return $.ajax({
+    method: 'PATCH',
+    url: config.apiUrl + '/paintings/' + id,
+    data: formData,
+    headers : {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
 
 
 module.exports = {
@@ -63,5 +73,6 @@ module.exports = {
   changePassword,
   signOut,
   createPainting,
-  indexPainting
+  indexPainting,
+  updatePainting
 }
