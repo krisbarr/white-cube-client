@@ -17,6 +17,28 @@ h1 {
 span {
   font-family: 'Bungee Hairline', cursive;
 }
+#auth, #create, #update, #destroy, #index {
+  text-align: center;
+  display: block;
+}
+form {
+  max-width: 50vw;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+input {
+  width: 100%;
+  margin: 5px;
+  display: inline-block;
+
+}
+
 button {
   background-color: white;
+}
+img {
+  margin: 10px 0 10px 0;
+  padding: 1px;
+  border: 1px solid black;
 }

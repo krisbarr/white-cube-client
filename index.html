@@ -14,27 +14,26 @@
     <body>
       <h1>WHITE CUBE <span>API</span></h1>
       <p id="message"></p>
-      <form id="sign-up">
-        <input name="credentials[email]" type="text" placeholder="email" required >
-        <input name="credentials[password]" type="password" placeholder="password" required>
-        <input name="credentials[password_confirmation]" type="password" placeholder="confirm password" required>
-        <button>Sign Up</button>
-      </form>
-      <hr>
-      <form id="sign-in">
-        <input name="credentials[email]" type="text" placeholder="email" required >
-        <input name="credentials[password]" type="password" placeholder="password" required>
-        <button>Sign In</button>
-      </form>
-      <hr>
-      <form id="change-password">
-        <input name="passwords[old]" type="password" placeholder="old password" required>
-        <input name="passwords[new]" type="password" placeholder="new password" required>
-          <button>Change Password</button>
+      <div id="auth">
+        <form id="sign-up">
+          <input name="credentials[email]" type="text" placeholder="email" required >
+          <input name="credentials[password]" type="password" placeholder="password" required>
+          <input name="credentials[password_confirmation]" type="password" placeholder="confirm password" required>
+          <button>Sign Up</button>
         </form>
-        <hr>
-        <button id="sign-out">Sign Out</button>
-        <hr>
+        <form id="sign-in">
+          <input name="credentials[email]" type="text" placeholder="email" required >
+          <input name="credentials[password]" type="password" placeholder="password" required>
+          <button>Sign In</button>
+        </form>
+        <form id="change-password">
+          <input name="passwords[old]" type="password" placeholder="old password" required>
+          <input name="passwords[new]" type="password" placeholder="new password" required>
+            <button>Change Password</button>
+          </form>
+          <button id="sign-out">Sign Out</button>
+        </div>
+      <div id="create">
         <form id="paintings-create">
           <input name="painting[title]" type="text" placeholder="Title" required>
           <input name="painting[image]" type="url" id="imageUrl" placeholder="Image URL" required>
@@ -42,38 +41,32 @@
           <input name="painting[location]" type="text" placeholder="Location" required>
           <input name="painting[yearPainted]" type="text" placeholder="Year Painted" required>
           <input name="painting[movement]" type="text" placeholder="Artistic Movement" required>
-          <hr>
             <button>Create Painting</button>
           </form>
-          <hr>
           <div id="painting-image"></div>
           <div id="painting-created"></div>
-          <hr>
-        <section id="update">
+        </div>
+        <div id="update">
           <form id='paintings-update'>
             <input name="painting[id]" type="text" placeholder="Enter id here" required>
             <input name="painting[title]" type="text" placeholder="Enter painting title" required>
             <input name="painting[arists]" type="text" placeholder="Enter artist"required>
             <input name="painting[location]" type="text" placeholder="Enter location" required>
+            <input name="painting[yearPainted]" type="text" placeholder="Year Painted" required>
             <input name="painting[movement]" type="text" placeholder="Enter movement"required>
-            <hr>
             <button>Update Painting</button>
           </form>
-        </section>
-        <hr>
-        <section id= "destroy">
+        </div>
+        <div id= "destroy">
           <form id="paintings-destroy">
             <input name="painting[id]" type="text" placeholder="Enter id here" required>
             <button>Delete Painting</button>
           </form>
-        </section>
-        <hr>
-        <section id='index'>
+        </div>
+        <div id='index'>
           <button id='paintings-index'>Get All Paintings</button>
-          <hr>
+          <div id="painting-images"></div>
           <div id='paintings-display'></div>
-        </section>
-
-
+        </div>
     </body>
 </html>

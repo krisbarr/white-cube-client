@@ -43,6 +43,9 @@ const onSignOutSuccess = function () {
   $('#paintings-destroy').hide()
   $('#paintings-update').hide()
   $('#paintings-index').hide()
+  $('#painting-created').hide()
+  $('#painting-image').hide()
+
 }
 const onCreateSuccess = function(response) {
 store.painting = response.painting
@@ -50,6 +53,7 @@ const paintingHtml = `
   <h4>Title: ${response.painting.title}</h4>
   <p>Artist: ${response.painting.artist}</p>
   <p>Location: ${response.painting.location}</p>
+  <p>Year Painted: ${response.painting.yearPainted}</p>
   <p>Movement: ${response.painting.movement}</p>
 `
 const imageHtml = `
@@ -65,15 +69,18 @@ const onIndexSuccess = function(response) {
   let paintingsHtml = ''
   paintings.forEach(painting => {
     paintingsHtml += `
+      <img src="${painting.image}" alt ="${painting.title}" style="width:150px" />
       <h6>Title: ${painting.title}</h6>
       <p>Artist: ${painting.artist}</p>
       <p>Location: ${painting.location}</p>
+      <p>Year Painted: ${painting.yearPainted}</p>
       <p>Movement: ${painting.movement}</p>
       <p>ID: ${painting._id}</p>
     `
-    $('#paintings-display').html(paintingsHtml)
-    $('#message').text("Here's all the paintings!")
   })
+
+  $('#paintings-display').html(paintingsHtml)
+  $('#message').text("Here's all the paintings!")
 }
 const onUpdateSuccess = function(response) {
   console.log(response)
