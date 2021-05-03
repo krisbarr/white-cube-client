@@ -9,9 +9,20 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+ul {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  text-align: left;
+  list-style-type: none;
+  font-size: 14px;
+}
 h1 {
   font-family: 'Bungee Outline', cursive;
   font-size: 96px;
+  text-align: center;
+}
+p {
   text-align: center;
 }
 span {
