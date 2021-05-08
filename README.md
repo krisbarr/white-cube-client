@@ -15,7 +15,7 @@ presented with the choice to create a painting, update a painting, get all the p
 ![Sign Up](https://media.git.generalassemb.ly/user/35003/files/26cc2900-a28b-11eb-8a17-29496943cbb9)
 ![Search Painting](https://media.git.generalassemb.ly/user/35003/files/3481ae80-a28b-11eb-9af6-d5d6d2ac1a51)
 ![Found Painting](https://media.git.generalassemb.ly/user/35003/files/60049900-a28b-11eb-80fc-b45da9c455ed)
-![View All Paintings](https://media.git.generalassemb.ly/user/35003/files
+![View All Paintings](https://media.git.generalassemb.ly/user/35003/files)
 
 ## User Stories
 * I want to sign up with my email, password and password confirmation
