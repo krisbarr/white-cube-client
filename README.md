@@ -3,7 +3,8 @@ This application allows the user to register with their email address and create
 the database.
 
 ## Important Links
-[Deployed Site](krisbarr.github.io/white-cube-client/)
+Deployed Site:
+krisbarr.github.io/white-cube-client/
 
 ## Planning Story
 
