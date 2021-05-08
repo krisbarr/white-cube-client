@@ -3,8 +3,6 @@
 const store = require('./store')
 const events = require('./events')
 const api = require('./api')
-const createPainting = api.createPainting
-
 const onSignUpSuccess = function () {
   $('#message').text("You're signed up!")
   $('#sign-up').trigger('reset')
@@ -30,7 +28,7 @@ const onSignInSuccess = function (response) {
   $('#paintings-index').show()
 }
 const onChangePasswordSuccess = function () {
-  $('#message').text("Your password has been changed")
+  $('#message').text('Your password has been changed')
   $('#change-password').trigger('reset')
 }
 const onSignOutSuccess = function () {
@@ -48,21 +46,21 @@ const onSignOutSuccess = function () {
   $('#painting-image').hide()
 }
 const onCreateSuccess = function (response) {
-store.painting = response.painting
-const paintingHtml = `
-  <h4>Title: ${response.painting.title}</h4>
-  <p>Artist: ${response.painting.artist}</p>
-  <p>Location: ${response.painting.location}</p>
-  <p>Year Painted: ${response.painting.yearPainted}</p>
-  <p>Movement: ${response.painting.movement}</p>
-`
-const imageHtml = `
-  <img src="${response.painting.image}" alt ="${response.painting.title}" style="width:300px" />
-`
-$('#message').text("You've created a painting!")
-$('#painting-image').html(imageHtml)
-$('#painting-created').html(paintingHtml)
-$('#paintings-create').trigger('reset')
+  store.painting = response.painting
+  const paintingHtml = `
+    <h4>Title: ${response.painting.title}</h4>
+    <p>Artist: ${response.painting.artist}</p>
+    <p>Location: ${response.painting.location}</p>
+    <p>Year Painted: ${response.painting.yearPainted}</p>
+    <p>Movement: ${response.painting.movement}</p>
+  `
+  const imageHtml = `
+    <img src="${response.painting.image}" alt ="${response.painting.title}" style="width:300px" />
+  `
+  $('#message').text("You've created a painting!")
+  $('#painting-image').html(imageHtml)
+  $('#painting-created').html(paintingHtml)
+  $('#paintings-create').trigger('reset')
 }
 const onIndexSuccess = function (response) {
   const paintings = response.paintings
@@ -90,7 +88,6 @@ const onDestroySuccess = function () {
   $('#message').text("You've successfully deleted the painting! Click Get All Paintings to refresh")
   $('#paintings-destroy').trigger('reset')
 }
-
 
 module.exports = {
   onSignUpSuccess,
